@@ -1,4 +1,5 @@
 import { h } from 'preact';
+import './index.scss';
 
 const Skip = ({
     href = '#main',
