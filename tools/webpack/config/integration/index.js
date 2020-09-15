@@ -28,14 +28,23 @@ module.exports = [
                 chunkFilename: '[id].css',
                 ignoreOrder: false,
             }),
-            new CopyWebpackPlugin([{
-                from: path.join(process.cwd(), paths.src.assets),
-                to: path.join(process.cwd(), paths.integrationOutput, paths.dest.assets)
-            }]),
-            new CopyWebpackPlugin([{
-                from: path.join(process.cwd(), paths.src.img),
-                to: path.join(process.cwd(), paths.integrationOutput, paths.dest.img)
-            }]),
+            new CopyWebpackPlugin({
+                patterns: [
+                    {
+                        from: path.join(process.cwd(), paths.src.assets),
+                        to: path.join(process.cwd(), paths.integrationOutput, paths.dest.assets),
+                        noErrorOnMissing: true
+                    }
+                ]
+            }),
+            new CopyWebpackPlugin({
+                patterns: [
+                    {
+                        from: path.join(process.cwd(), paths.src.img),
+                        to: path.join(process.cwd(), paths.integrationOutput, paths.dest.img)
+                    }
+                ]
+            }),
             new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })
         ],
     }),
