@@ -9,13 +9,15 @@ const Form = ({
     name,
     autocomplete,
     enctype,
-    children
+    children,
+    ...props
 }) => <form
     id={id}
     class={className}
     action={action}
     method={method}
-    novalidate={novalidate}>
+    novalidate={novalidate}
+    {...props}>
     {children}
 </form>;
 

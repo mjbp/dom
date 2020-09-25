@@ -21,7 +21,7 @@ const TextInput = ({
     size,
     spellcheck,
     ariaLabel,
-    dataAttributes
+    ...props
 }) => <input
     class={`input${className ? ` ${className}` : ''}`}
     type={type}
@@ -43,7 +43,7 @@ const TextInput = ({
     size={size}
     spellcheck={spellcheck}
     readonly={readonly}
-    {...dataAttributes}
+    {...props}
 />;
 
 export default TextInput;

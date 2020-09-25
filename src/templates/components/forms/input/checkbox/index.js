@@ -10,7 +10,7 @@ const Checkbox = ({
     label,
     ariaLabel,
     required,
-    dataAttributes
+    ...props
 }) => <div class="checkbox">
     {label && <Label className={'checkbox__label'} htmlFor={id}>{label}</Label>}
     <input
@@ -22,7 +22,7 @@ const Checkbox = ({
         checked={checked}
         required={required}
         aria-label={ariaLabel}
-        {...dataAttributes}
+        {...props}
     />
 </div>;
 

@@ -13,13 +13,24 @@ module.exports = {
         entrypoints: false
     },
     plugins: [
-        new webpack.optimize.LimitChunkCountPlugin({
-            maxChunks: 5
-        }),
+        // new webpack.optimize.LimitChunkCountPlugin({
+        //     maxChunks: 5
+        // }),
         new webpack.optimize.MinChunkSizePlugin({
             minChunkSize: 8000
         })
     ],
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                validate: {
+                    test: /validate/,
+                    name: 'validate',
+                    chunks: 'all',
+                }
+            }
+        }
+    },
     module: {
         rules: [
             {

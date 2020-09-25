@@ -18,7 +18,7 @@ const FileInput = ({
     multiple,
     accept,
     ariaLabel,
-    dataAttributes
+    ...props
 }) => <input
     class={`input${className ? ` ${className}` : ''}`}
     type={type}
@@ -37,7 +37,7 @@ const FileInput = ({
     placeholder={placeholder}
     disabled={disabled}
     readonly={readonly}
-    {...dataAttributes}
+    {...props}
 />;
 
 export default FileInput;

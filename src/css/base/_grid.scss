@@ -1,13 +1,3 @@
-.wrap {
-    @include wrap;
-}
-.row {
-    display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
-    margin-left: calc(var(--gutter)*-.5);
-    margin-right: calc(var(--gutter)*-.5);
-}
 .col {
     margin-left: calc(var(--gutter)*.5);
     margin-right: calc(var(--gutter)*.5);

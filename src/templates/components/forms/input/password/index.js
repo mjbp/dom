@@ -19,7 +19,7 @@ const PasswordInput = ({
     placeholder,
     size,
     ariaLabel,
-    dataAttributes
+    ...props
 }) => <input
     class={`input${className ? ` ${className}` : ''}`}
     type={type}
@@ -39,7 +39,7 @@ const PasswordInput = ({
     placeholder={placeholder}
     readonly={readonly}
     size={size}
-    {...dataAttributes}
+    {...props}
 />;
 
 export default PasswordInput;

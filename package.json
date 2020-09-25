@@ -31,7 +31,7 @@
     "@babel/plugin-transform-object-assign": "^7.2.0",
     "@babel/plugin-transform-react-jsx": "^7.0.0",
     "@babel/preset-env": "^7.1.6",
-    "@stormid/eslint-config": "^1.1.1",
+    "@stormid/eslint-config": "^1.2.0",
     "@stormid/outliner": "^1.0.0-alpha.4",
     "@stormid/storybook-html-addon-markup": "^0.1.1",
     "@stormid/toggle": "^1.0.0-alpha.4",
@@ -79,6 +79,7 @@
   },
   "dependencies": {
     "@microsoft/applicationinsights-web": "^2.2.4",
+    "@stormid/validate": "^1.0.0-alpha.5",
     "es6-object-assign": "^1.1.0",
     "picturefill": "^3.0.3",
     "promise-polyfill": "^8.1.0"

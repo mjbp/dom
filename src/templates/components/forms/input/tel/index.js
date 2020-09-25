@@ -19,7 +19,7 @@ const TelInput = ({
     size,
     pattern,
     ariaLabel,
-    dataAttributes
+    ...props
 }) => <input
     class={`input${className ? ` ${className}` : ''}`}
     type={type}
@@ -39,7 +39,7 @@ const TelInput = ({
     pattern={pattern}
     disabled={disabled}
     readonly={readonly}
-    {...dataAttributes}
+    {...props}
 />;
 
 export default TelInput;

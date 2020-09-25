@@ -17,10 +17,10 @@ const Select = ({
     minlength,
     size,
     ariaLabel,
-    dataAttributes,
-    children
+    children,
+    ...props
 }) => <select
-    class={`input${className ? ` ${className}` : ''}`}
+    class={`select${className ? ` ${className}` : ''}`}
     id={id}
     name={name}
     value={value}
@@ -32,7 +32,7 @@ const Select = ({
     size={size}
     disabled={disabled}
     readonly={readonly}
-    {...dataAttributes}
+    {...props}
 >
     {children}
 </select>;

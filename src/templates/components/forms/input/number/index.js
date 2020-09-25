@@ -19,7 +19,7 @@ const NumberInput = ({
     placeholder,
     ariaLabel,
     step,
-    dataAttributes
+    ...props
 }) => <input
     class={`input${className ? ` ${className}` : ''}`}
     type={type}
@@ -38,7 +38,7 @@ const NumberInput = ({
     placeholder={placeholder}
     disabled={disabled}
     readonly={readonly}
-    {...dataAttributes}
+    {...props}
 />;
 
 export default NumberInput;

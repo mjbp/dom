@@ -16,7 +16,8 @@ const Textarea = ({
     minlength,
     spellcheck,
     ariaLabel,
-    children
+    children,
+    ...props
 }) => <textarea
     id={id}
     name={name}
@@ -32,7 +33,8 @@ const Textarea = ({
     minlength={minlength}
     spellcheck={spellcheck}
     placeholder={placeholder}
-    readonly={readonly}>
+    readonly={readonly}
+    {...props}>
     {children}
 </textarea>;
 

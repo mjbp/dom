@@ -10,7 +10,7 @@ const HiddenInput = ({
     required,
     disabled,
     readonly,
-    dataAttributes
+    ...props
 }) => <input
     type={type}
     id={id}
@@ -20,7 +20,7 @@ const HiddenInput = ({
     required={required}
     disabled={disabled}
     readonly={readonly}
-    {...dataAttributes}
+    {...props}
 />;
 
 export default HiddenInput;

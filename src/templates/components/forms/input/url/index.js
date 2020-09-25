@@ -20,7 +20,7 @@ const UrlInput = ({
     pattern,
     spellcheck,
     ariaLabel,
-    dataAttributes
+    ...props
 }) => <input
     class={`input${className ? ` ${className}` : ''}`}
     type={type}
@@ -41,7 +41,7 @@ const UrlInput = ({
     pattern={pattern}
     disabled={disabled}
     readonly={readonly}
-    {...dataAttributes}
+    {...props}
 />;
 
 export default UrlInput;

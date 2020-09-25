@@ -9,7 +9,7 @@ const Radio = ({
     checked,
     className,
     ariaLabel,
-    dataAttributes
+    ...props
 }) => <div class="radio">
     {label && <Label className={'radio__label'} htmlFor={id}>{label}</Label>}
     <input
@@ -20,7 +20,7 @@ const Radio = ({
         value={value}
         checked={checked}
         aria-label={ariaLabel}
-        {...dataAttributes}
+        {...props}
     />
 </div>;
 
